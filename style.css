@@ -1,0 +1,165 @@
+@font-face {
+  font-family: D-Din-Bold;
+  src: url("fonts/d-din/D-DIN-Bold.otf");
+}
+
+@font-face {
+  font-family: D-Din-Regular;
+  src: url("fonts/d-din/D-DIN.otf");
+}
+* {
+  box-sizing: border-box;
+  font-family: D-DIN-Bold, Arial, Verdana, sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+#header {
+  display: flex;
+  align-items: center;
+  max-width: 1400px;
+  padding: 15px 50px;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}
+
+.logo {
+  width: 120px;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.nav-items a,
+.nav-right a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 18px;
+  margin-left: 13px;
+  position: relative;
+}
+
+.nav-items a:before,
+.nav-right a:before {
+  position: absolute;
+  content: "";
+  width: 0;
+  right: 0;
+  bottom: -3px;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.2s linear;
+}
+
+.nav-items a:hover::before,
+.nav-right a :hover:before {
+  right: initial;
+  left: 0;
+  width: 100%;
+}
+
+.nav-items {
+  margin-right: 220px;
+}
+
+.nav-right {
+  position: fixed;
+  right: 0;
+  top: 20px;
+  padding-top: 45px;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-items {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .nav-items {
+    display: block;
+  }
+
+  .logo {
+    width: 120px;
+    margin-right: 200px;
+    position: relative;
+    top: initial;
+    left: initial;
+  }
+}
+
+.nav-right button {
+  margin-left: 17px;
+  color: #fff;
+  background-color: transparent;
+  border: 0;
+  transform: rotate(90deg);
+}
+
+section {
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+section .content {
+  position: absolute;
+  bottom: 15%;
+  left: 70px;
+}
+
+section .content h2 {
+  font-size: 48px;
+  margin-top: 10px;
+}
+
+section .content h3 {
+  margin: 0;
+}
+
+section a {
+  border: 1px solid #fff;
+  padding: 18px 60px;
+}
+
+.content-last {
+  position: absolute;
+  bottom: 15%;
+  left: 70px;
+  max-width: 500px;
+}
+
+.content-last h2 {
+  font-size: 48px;
+}
+
+footer {
+  height: 13vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-family: D-Din-Regular;
+}
+
+footer span {
+  padding-right: 15px;
+  color: #777;
+}
+
+footer a {
+  padding: 15px;
+}
